@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BUGO</title>
+</head>
+<body>
+	<ul>	
+			<li>	What is kira</li>
+	</ul>
+	<div id="web-contents"></div>
+</body>
+
+<script type="text/javascript">
+	// Database
+	var array = [
+		'Who is kira',
+		'Why is kira',
+		'How is kira',
+		'How is kira',
+		'How is kira',
+		'How is kira',
+	];
+
+	// var array = database.getLatest10Posts() // ['post 1', post2]
+	var list_of_questions = '<ul>';
+
+	for (let i in array) {
+		var question = array[i];
+
+		list_of_questions = list_of_questions + '<li style="color: red;">' + question + '</li>';
+	}
+
+	list_of_questions = list_of_questions + '</ul>';
+
+	console.log(list_of_questions);
+
+	document.getElementById("web-contents").innerHTML = list_of_questions;
+</script>
+</html>
